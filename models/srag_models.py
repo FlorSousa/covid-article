@@ -61,6 +61,11 @@ class FatoSrag(Base):
     id_mes_fato = Column(Integer, ForeignKey(DimensaoData.id), nullable=True)
     id_sexo_fato = Column(Integer, ForeignKey(DimensaoSexoSrag.id), nullable=False)
     id_estado_fato = Column(Integer, ForeignKey(DimensaoEstado.id), nullable=False)
+    notificacoes = Column(Integer,nullable=False,default = 0)
+    internacoes = Column(Integer,nullable=False,default = 0)
+    internacoes_entrada_uti = Column(Integer,nullable=False,default = 0)
+    internacoes_saida_uti = Column(Integer,nullable=False,default = 0)
+    obitos = Column(Integer,nullable=False,default = 0)
 
     cbo_fato = relationship(DimensaoOcupacaoSrag, backref="fatos")
     ano_fato = relationship(DimensaoData, foreign_keys=[id_ano_fato], backref="fatos_ano")
