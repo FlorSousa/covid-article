@@ -1,0 +1,204 @@
+TITULO;CODIGO;PROFISSIONAL
+Anestesiologista;225151;True
+Médico anestesiologista;225151;True
+Assistente social;251605;True
+Farmacêutico;223405;True
+Cirurgião;225225;True
+Cirurgião geral;225225;True
+Médico cirurgião;225225;True
+Médico cirurgião geral;225225;True
+Médico clínico;225125;True
+Médico clínico;225125;True
+Enfermeiro;223505;True
+Sanitarista;131225;True
+Enfermeiro auditor;223510;True
+Enfermeiro da estratégia de saúde da família;223565;True
+Enfermeiro de bordo;223515;True
+Enfermeiro de centro cirúrgico;223520;True
+Enfermeiro de terapia intensiva;223525;True
+Enfermeiro do trabalho;223530;True
+Enfermeiro nefrologista;223535;True
+Nefrologista;225109;True
+Enfermeiro neonatologista;223540;True
+Neonatologista;225124;True
+Enfermeiro obstétrico;223545;True
+Enfermeiro psiquiátrico;223550;True
+Enfermeiro puericultor e pediátrico;223555;True
+Enfermeiro sanitarista;223560;True
+Sanitarista;131225;True
+Acupunturista;322105;True
+Fisioterapeuta acupunturista;223650;True
+Fisioterapeuta esportivo;223655;True
+Fisioterapeuta geral;223605;True
+Fisioterapeuta neurofuncional;223630;True
+Fisioterapeuta osteopata;223640;True
+Osteopata;226110;True
+Fisioterapeuta quiropraxista;223645;True
+Quiropraxista;226105;True
+Fisioterapeuta traumatoortopédica funcional;223635;True
+Ecologista;203005;True
+Ginecologista;225250;True
+Médico ginecologista;225250;True
+Obstetra;225250;True
+Médico da estratégia de saúde da família;225142;True
+Médico de família;225130;True
+Médico de família e comunidade;225130;True
+Nutricionista;223710;True
+Cirurgião dentista  auditor;223204;True
+Dentista;223208;True
+Cirurgião dentista  clínico geral;223208;True
+Clínico geral;225125;True
+Cirurgião dentista  dentística;223280;True
+Cirurgião dentista  endodontista;223212;True
+Cirurgião dentista  epidemiologista;223216;True
+Epidemiologista;225139;True
+Cirurgião dentista  estomatologista;223220;True
+Cirurgião dentista  implantodontista;223224;True
+Cirurgião dentista  odontogeriatra;223228;True
+Geriatra;225180;True
+Cirurgião dentista  odontologia do trabalho;223276;True
+Cirurgião dentista  odontologista legal;223232;True
+Odontologista;223208;True
+Cirurgião dentista  odontopediatra;223236;True
+Odontopediatra;223236;True
+Pediatra;225124;True
+Cirurgião dentista  ortopedista e ortodontista;223240;True
+Ortodontista;223240;True
+Ortopedista;225270;True
+Cirurgião dentista  patologista bucal;223244;True
+Patologista;225325;True
+Cirurgião dentista  periodontista;223248;True
+Periodontista;223248;True
+Cirurgião dentista  protesista;223256;True
+Protesista;223256;True
+Cirurgião dentista  protesiólogo bucomaxilofacial;223252;True
+Cirurgião dentista  radiologista;223260;True
+Radiologista;225320;True
+Cirurgião dentista  reabilitador oral;223264;True
+Reabilitador oral;223256;True
+Traumatologista;225270;True
+Cirurgião dentista de saúde coletiva;223272;True
+Dentista de saúde coletiva;223272;True
+Médico pediatra;225124;True
+Psicólogo clínico;251510;True
+Psicólogo do esporte;251515;True
+Psicólogo do trabalho;251540;True
+Psicólogo social;251530;True
+Psicólogo educacional;251505;True
+Psicólogo hospitalar;251520;True
+Psicólogo do trânsito;251535;True
+Psicólogo acupunturista;251555;True
+Médico psiquiatra;225133;True
+Psiquiatra;225133;True
+Médico em radiologia e diagnóstico por imagem;225320;True
+Médico sanitarista;225139;True
+Médico acupunturista;225105;True
+Alergista;225110;True
+Alergista e imunologista;225110;True
+Médico alergista;225110;True
+Médico alergista e imunologista;225110;True
+Médico anatomopatologista;225325;True
+Angiologista;225115;True
+Médico angiologista;225115;True
+Cardiologista;225120;True
+Intervencionista;225355;True
+Médico cardiologista;225120;True
+Médico cancerologista pediátrico;225122;True
+Cirurgião cardiovascular;225210;True
+Médico cirurgião cardiovascular;225210;True
+Cirurgião da mão;225295;True
+Médico cirurgião da mão;225295;True
+Cirurgião de cabeça e pescoço;225215;True
+Médico cirurgião de cabeça e pescoço;225215;True
+Cirurgião do aparelho digestivo;225220;True
+Médico cirurgião do aparelho digestivo;225220;True
+Cirurgião pediátrico;225230;True
+Médico cirurgião pediátrico;225230;True
+Cirurgião plástico;225235;True
+Médico cirurgião plástico;225235;True
+Cirurgião torácico;225240;True
+Médico cirurgião torácico;225240;True
+Citopatologista;225305;True
+Médico citopatologista;225305;True
+Coloproctologista;225280;True
+Médico coloproctologista;225280;True
+Proctologista;225280;True
+Dermatologista;225135;True
+Médico dermatologista;225135;True
+Médico do trabalho;225140;True
+Médico em cirurgia vascular;225203;True
+Médico em endoscopia;225310;True
+Médico em medicina de tráfego;225145;True
+Médico em medicina intensiva;225150;True
+Médico em medicina nuclear;225315;True
+Endocrinologista;225155;True
+Médico endocrinologista;225155;True
+Médico endocrinologista e metabologista;225155;True
+Metabologista;225155;True
+Fisiatra;225160;True
+Médico fisiatra;225160;True
+Foniatra;225275;True
+Médico foniatra;225275;True
+Gastroenterologista;225165;True
+Médico gastroenterologista;225165;True
+Geneticista;201115;True
+Médico geneticista;225175;True
+Médico geriatra;225180;True
+Hematologista;225185;True
+Médico hematologista;225185;True
+Barista;513440;True
+Médico hiperbarista;225345;True
+Médico homeopata;225195;True
+Infectologista;225103;True
+Médico infectologista;225103;True
+Legista;225106;True
+Médico legista;225106;True
+Mastologista;225255;True
+Médico mastologista;225255;True
+Médico nefrologista;225109;True
+Médico neurocirurgião;225260;True
+Neurocirurgião;225260;True
+Médico neurofisiologista;225350;True
+Médico neurofisiologista clínico;225350;True
+Neurofisiologista clínico;225350;True
+Médico neurologista;225112;True
+Neurologista;225112;True
+Urologista;225285;True
+Médico nutrologista;225118;True
+Nutrologista;225118;True
+Médico oftalmologista;225265;True
+Oftalmologista;225265;True
+Médico oncologista clínico;225121;True
+Oncologista (clínico);225121;True
+Médico ortopedista;225270;True
+Médico ortopedista e traumatologista;225270;True
+Médico otorrinolaringologista;225275;True
+Otorrino;225275;True
+Otorrinolaringologista;225275;True
+Médico patologista;225325;True
+Médico patologista clínico;225335;True
+Médico patologista clínico / medicina laboratorial;225335;True
+Patologista clínico;225335;True
+Médico pneumologista;225127;True
+Pneumologista;225127;True
+Médico radioterapeuta;225330;True
+Radioterapeuta;225330;True
+Médico reumatologista;225136;True
+Reumatologista;225136;True
+Médico urologista;225285;True
+Biomédico;221205;True
+Médico veterinário;223305;True
+Veterinário;223305;True
+Neuropsicólogo;251545;True
+Ortoptista;223910;True
+Pesquisador em biologia ambiental;203005;True
+Pesquisador em biologia animal;203010;True
+Pesquisador em biologia humana;203020;True
+Pesquisador em ciências sociais e humanas;203505;True
+Pesquisador em psicologia;203525;True
+Pesquisador em saúde coletiva;203320;True
+Preparador físico;224120;True
+Canalista;223212;True
+Psicanalista;251550;True
+Psicopedagogo;239425;True
+Terapeuta ocupacional;223905;True

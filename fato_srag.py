@@ -5,7 +5,7 @@ import pandas as pd
 from dotenv import load_dotenv
 from models.srag_models import*
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import func, create_engine
+from sqlalchemy import distinct, func, create_engine
 from urllib.parse import quote_plus as urlquote
 
 load_dotenv()
@@ -27,10 +27,31 @@ def cria_dimensao():
         print(f"Erro: {e}")
         return False
 
+def carrega_dimensao():
+    try:
+        print("Carregando dados para dimensao data")
+        query = 'SELECT DISTINCT dt_notific FROM srag;'
+        dataQuery = pd.to_datetime(pd.read_sql_query(query, engine)['dt_notific'],format="%d/%m/%Y")
+        df_data = pd.DataFrame(dataQuery, index=None)
+        lista_meses = [int(mes) for mes in df_data['dt_notific'].dt.month.sort_values().unique()]
+        lista_anos = [int(ano) for ano in df_data['dt_notific'].dt.year.sort_values().unique() if int(ano) >= 2020 or int(ano) <= datetime.datetime.now().date().year]
+        [session.add(DimensaoData(mes=mes, ano=ano)) for ano in lista_anos for mes in lista_meses]   
+
+        print("Carregando dados para dimensao sexo")
+        
+             
+        session.commit()
+        
+        print()
+    except Exception as e:
+        print(f"Erro: {e}")
+    finally:
+        print("okay")
+
 if cria_dimensao():
     try:
         session = sessionmaker(bind=engine)()
-        
+        carrega_dimensao()
         dataframe_notificacoes = pd.DataFrame(session.query(
             func.substr(SRAG.dt_notific, 7, 4).label('ano'),
             func.substr(SRAG.dt_notific, 4, 2).label('mes'),
