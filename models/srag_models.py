@@ -1,8 +1,25 @@
-from sqlalchemy import Column, ForeignKey, Integer, String, Boolean
+from sqlalchemy import Column, ForeignKey, Integer, String, Boolean, Float
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 
 Base = declarative_base()
+
+class SRAG(Base):
+        __tablename__ = 'srag'
+
+        id = Column(Integer, primary_key=True)
+        dt_evoluca = Column(String)
+        dt_interna = Column
+        dt_notific = Column(String)
+        cs_sexo = Column(String)
+        sg_uf = Column(String)
+        pac_cocbo = Column(String)
+        classi_fin = Column(Integer)
+        evolucao = Column(Integer)
+        hospital = Column(Float)
+        dt_entuti = Column(String)
+        dt_saiduti = Column(String)
+        uti = Column(Float)
 
 class DimensaoData(Base):
     __tablename__ = 'dimensao_data_srag'

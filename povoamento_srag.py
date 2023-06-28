@@ -9,7 +9,7 @@ inicio = time.time()
 try:
     print("Iniciando conexão")
     engine = create_engine(url="postgresql://%s:%s@%s" % (os.getenv('USER'), urlquote(os.getenv('PASSWORD')),
-                                    os.getenv('HOST') + ":5432/" + os.getenv('DB_NAME')), echo = True ).connect()
+                                    os.getenv('HOST') + ":5432/" + os.getenv('DB_NAME')), echo = False ).connect()
     print("Conexão feita")
     print("Montando tabela povoamento_srag")
     dataframe = pd.concat([pd.DataFrame(pd.read_csv("data/"+filename,sep=";",low_memory=False)) for filename in os.listdir("data")])
