@@ -48,7 +48,7 @@ if cria_dimensao():
         SRAG.cs_sexo.label('sexo'),
         SRAG.sg_uf.label('uf'),
         SRAG.pac_cocbo.label('ocupacao'),
-        func.count().label('internacoes_entrada_uti')
+        func.count().label('internacoes')
     ).filter(SRAG.classi_fin == 5).filter(SRAG.uti == 1).group_by('ano', 'mes', 'sexo', 'uf', 'ocupacao').all())
 
     dataframe_entrada_uti = pd.DataFrame(session.query(
@@ -95,8 +95,19 @@ if cria_dimensao():
     
 
     tabela_fato_dataframe = pd.concat([dataframe_notificacoes,dataframe_internacoes,dataframe_entrada_uti, dataframe_saida_uti,dataframe_obitos])
-    
+    print(tabela_fato_dataframe)
 
+    tabela_fato_dataframe["sexo"] = tabela_fato_dataframe["sexo"].replace('M','1').replace('F','2').replace('I','3').fillna('0').astype(int)
+    tabela_fato_dataframe["ano"] = tabela_fato_dataframe["ano"].fillna('0').astype(int)
+    tabela_fato_dataframe["mes"] = tabela_fato_dataframe["mes"].fillna('0').astype(int)
+    tabela_fato_dataframe["uf"] = tabela_fato_dataframe["uf"].fillna('0')
+    tabela_fato_dataframe['internacoes'] = tabela_fato_dataframe['internacoes'].fillna(0).astype(int)
+    tabela_fato_dataframe['internacoes_entrada_uti'] = tabela_fato_dataframe['internacoes_entrada_uti'].fillna('0').astype(int)
+    tabela_fato_dataframe['internacoes_saida_uti'] = tabela_fato_dataframe['internacoes_saida_uti'].fillna(0).astype(int)
+    tabela_fato_dataframe['obitos'] =tabela_fato_dataframe['obitos'].fillna(0).astype(int)
+    tabela_fato_dataframe['ocupacao'] =tabela_fato_dataframe['ocupacao'].fillna('0')
+    tabela_fato_dataframe['notificacoes'] =tabela_fato_dataframe['notificacoes'].fillna(0).astype(int)
+    
     session.close()
 
 fim = time.time()
