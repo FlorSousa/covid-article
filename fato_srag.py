@@ -30,19 +30,29 @@ def cria_dimensao():
 def carrega_dimensao():
     try:
         print("Carregando dados para dimensao data")
-        query = 'SELECT DISTINCT dt_notific FROM srag;'
-        dataQuery = pd.to_datetime(pd.read_sql_query(query, engine)['dt_notific'],format="%d/%m/%Y")
-        df_data = pd.DataFrame(dataQuery, index=None)
-        lista_meses = [int(mes) for mes in df_data['dt_notific'].dt.month.sort_values().unique()]
-        lista_anos = [int(ano) for ano in df_data['dt_notific'].dt.year.sort_values().unique() if int(ano) >= 2020 or int(ano) <= datetime.datetime.now().date().year]
-        [session.add(DimensaoData(mes=mes, ano=ano)) for ano in lista_anos for mes in lista_meses]   
-
+        dataQuery = pd.to_datetime(pd.read_sql_query('SELECT DISTINCT dt_notific FROM srag;',engine)['dt_notific'],format="%d/%m/%Y")
+        dataframe_query = pd.DataFrame(dataQuery, index=None)
+        lista_meses = [int(mes) for mes in dataframe_query['dt_notific'].dt.month.sort_values().unique()]
+        lista_anos = [int(ano) for ano in dataframe_query['dt_notific'].dt.year.sort_values().unique() if int(ano) >= 2020 or int(ano) <= datetime.datetime.now().date().year]
+        for mes in lista_meses:
+            for ano in lista_anos:
+                session.add(DimensaoData(mes=mes, ano=ano)) 
+        print("Dados foram carregados para a dimensao data")
+    
         print("Carregando dados para dimensao sexo")
-        
-             
+        dataQuery = pd.read_sql_query('SELECT DISTINCT "cs_sexo" FROM srag;',engine)
+        dataframe_query = pd.DataFrame(dataQuery)
+        valor_nulo = pd.Series(['0'], index=dataframe_query.columns)
+        dataframe_query.loc[len(dataframe_query)] = valor_nulo
+        sexo_relation = {"M":1,"F":2,"I":3,"0":0}
+
+        for sexo in dataframe_query['cs_sexo']:
+            if sexo in sexo_relation:
+                session.add(DimensaoSexoSrag(sexo=sexo, sexo_num=sexo_relation[sexo]))
+        print("Dados foram carregados para a dimensao sexo")
+
         session.commit()
-        
-        print()
+
     except Exception as e:
         print(f"Erro: {e}")
     finally:
