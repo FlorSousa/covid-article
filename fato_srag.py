@@ -87,11 +87,15 @@ def carrega_dimensao():
         
         dataframe_profi_saude = pd.read_csv("utils\CBO_PROFISSIONAIS_SAUDE_1.csv", encoding="UTF-8", dtype={'CODIGO': object}, delimiter=";", index_col=None)
         dataframe_profi_geral = pd.read_csv("utils\CBO2002_Ocupacao.csv", encoding="latin_1", dtype={'CODIGO': object}, delimiter=";", index_col=None)
-        
-        dataframe_cbo = dataframe_profi_geral.merge(dataframe_profi_saude, on=['CODIGO','TITULO'], how='outer').merge(dataframe_cbo, on=['CODIGO','TITULO'], how='outer')
-        dataframe_cbo.fillna({'CODIGO': '0', 'TITULO': 'não informado', 'PROFI_SAUDE': False}, inplace=True)
-        dataframe_cbo = dataframe_cbo.drop_duplicates()
 
+        dataframe_cbo = dataframe_profi_geral.merge(dataframe_profi_saude, on=['CODIGO','TITULO'], how='outer')
+        dataframe_cbo['CODIGO'].fillna('0', inplace=True)
+        dataframe_cbo['TITULO'].fillna('não informado', inplace=True)
+        dataframe_cbo['PROFI_SAUDE'].fillna(False, inplace=True)
+
+
+        dataframe_cbo = dataframe_cbo.drop_duplicates()
+        
         for row in dataframe_cbo.values:
             session.add(DimensaoOcupacaoSrag(
                 cbo_codigo = row[0],
