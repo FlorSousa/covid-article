@@ -4,10 +4,11 @@ import json
 import datetime
 import pandas as pd
 from dotenv import load_dotenv
-from models.srag_models import *
+from models.srag_models import*
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import distinct, func, create_engine
+from sqlalchemy import func, create_engine
 from urllib.parse import quote_plus as urlquote
+
 
 load_dotenv()
 inicio = time.time()
@@ -77,13 +78,37 @@ def carrega_dimensao():
                         regiao = json_estados[uf]["regiao"]
                     ))
         print("Dados foram carregados para a dimensao estado")
+
+        print("Carregando dados para dimensao ocupacao")
+
+        dataQuery = pd.read_sql_query('SELECT DISTINCT pac_cocbo , lower(pac_dscbo) FROM srag;', engine)
+        dataframe_cbo  = pd.DataFrame(dataQuery)
+        dataframe_cbo.rename(columns={'pac_cocbo': 'CODIGO', 'lower':'TITULO'}, inplace=True)
         
+        dataframe_profi_saude = pd.read_csv("utils\CBO_PROFISSIONAIS_SAUDE_1.csv", encoding="UTF-8", dtype={'CODIGO': object}, delimiter=";", index_col=None)
+        dataframe_profi_geral = pd.read_csv("utils\CBO2002_Ocupacao.csv", encoding="latin_1", dtype={'CODIGO': object}, delimiter=";", index_col=None)
+        
+        dataframe_cbo = dataframe_profi_geral.merge(dataframe_profi_saude, on=['CODIGO','TITULO'], how='outer').merge(dataframe_cbo, on=['CODIGO','TITULO'], how='outer')
+        dataframe_cbo.fillna({'CODIGO': '0', 'TITULO': 'não informado', 'PROFI_SAUDE': False}, inplace=True)
+        dataframe_cbo = dataframe_cbo.drop_duplicates()
+
+        for row in dataframe_cbo.values:
+            session.add(DimensaoOcupacaoSrag(
+                cbo_codigo = row[0],
+                nome_profissao = row[1] ,
+                profissional_saude = row[2]
+            ))
+            
+        print("Dados foram carregados para a ocupacao")
+
+        print("Salvando dados no Banco de dados")
         session.commit()
 
     except Exception as e:
         print(f"Erro: {e}")
     finally:
-        print("okay")
+        print("Dimensões salvas")
+
 
 
 if cria_dimensao():
