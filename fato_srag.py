@@ -86,7 +86,7 @@ def carrega_dimensao():
         dataframe_cbo.rename(columns={'pac_cocbo': 'CODIGO', 'lower':'TITULO'}, inplace=True)
         
         dataframe_profi_saude = pd.read_csv("utils\CBO_PROFISSIONAIS_SAUDE_1.csv", encoding="UTF-8", dtype={'CODIGO': object}, delimiter=";", index_col=None)
-        dataframe_profi_geral = pd.read_csv("utils\CBO2002_Ocupacao.csv", encoding="latin_1", dtype={'CODIGO': object}, delimiter=";", index_col=None)
+        dataframe_profi_geral = pd.read_csv("utils\CBO2002_Ocupacao.csv", encoding="UTF-8", dtype={'CODIGO': object}, delimiter=";", index_col=None)
 
         dataframe_cbo = dataframe_profi_geral.merge(dataframe_profi_saude, on=['CODIGO','TITULO'], how='outer')
         dataframe_cbo['CODIGO'].fillna('0', inplace=True)
