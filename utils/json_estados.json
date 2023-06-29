@@ -1,0 +1,142 @@
+{
+    "0": {
+        "codigo_ibge": "0",
+        "nome": "NÃO INFORMADO",
+        "regiao": "NÃO INFORMADO"
+    },
+    "RO": {
+        "codigo_ibge": "11",
+        "nome": "RONDÔNIA",
+        "regiao": "NORTE"
+    },
+    "AC": {
+        "codigo_ibge": "12",
+        "nome": "ACRE",
+        "regiao": "NORTE"
+    },
+    "AM": {
+        "codigo_ibge": "13",
+        "nome": "AMAZONIA",
+        "regiao": "NORTE"
+    },
+    "RR": {
+        "codigo_ibge": "14",
+        "nome": "RORAIMA",
+        "regiao": "NORTE"
+    },
+    "PA": {
+        "codigo_ibge": "15",
+        "nome": "PARÁ",
+        "regiao": "NORTE"
+    },
+    "AP": {
+        "codigo_ibge": "16",
+        "nome": "AMAPÁ",
+        "regiao": "NORTE"
+    },
+    "TO": {
+        "codigo_ibge": "17",
+        "nome": "TOCANTINS",
+        "regiao": "NORTE"
+    },
+    "MA": {
+        "codigo_ibge": "21",
+        "nome": "MARANHÃO",
+        "regiao": "NORDESTE"
+    },
+    "PI": {
+        "codigo_ibge": "22",
+        "nome": "PIAUI",
+        "regiao": "NORDESTE"
+    },
+    "CE": {
+        "codigo_ibge": "23",
+        "nome": "CEARÁ",
+        "regiao": "NORDESTE"
+    },
+    "RN": {
+        "codigo_ibge": "24",
+        "nome": "RIO GRANDE DO NORTE",
+        "regiao": "NORDESTE"
+    },
+    "PB": {
+        "codigo_ibge": "25",
+        "nome": "PARAÍBA",
+        "regiao": "NORDESTE"
+    },
+    "PE": {
+        "codigo_ibge": "26",
+        "nome": "PERNANBUCO",
+        "regiao": "NORDESTE"
+    },
+    "AL": {
+        "codigo_ibge": "27",
+        "nome": "ALAGOAS",
+        "regiao": "NORDESTE"
+    },
+    "SE": {
+        "codigo_ibge": "28",
+        "nome": "SERGIPE",
+        "regiao": "NORDESTE"
+    },
+    "BA": {
+        "codigo_ibge": "29",
+        "nome": "BAHIA",
+        "regiao": "NORDESTE"
+    },
+    "MG": {
+        "codigo_ibge": "31",
+        "nome": "MINAS GERAIS",
+        "regiao": "SUDESTE"
+    },
+    "ES": {
+        "codigo_ibge": "32",
+        "nome": "ESPÍRITO SANTOS",
+        "regiao": "SUDESTE"
+    },
+    "RJ": {
+        "codigo_ibge": "33",
+        "nome": "RIO DE JANEIRO",
+        "regiao": "SUDESTE"
+    },
+    "SP": {
+        "codigo_ibge": "35",
+        "nome": "SÃO PAULO",
+        "regiao": "SUDESTE"
+    },
+    "PR": {
+        "codigo_ibge": "41",
+        "nome": "PARANÁ",
+        "regiao": "SUL"
+    },
+    "SC": {
+        "codigo_ibge": "42",
+        "nome": "SANTA CATARINA",
+        "regiao": "SUL"
+    },
+    "RS": {
+        "codigo_ibge": "43",
+        "nome": "RIO GRANDE DO SUL",
+        "regiao": "SUL"
+    },
+    "MS": {
+        "codigo_ibge": "50",
+        "nome": "MATO GROSSO DO SUL",
+        "regiao": "CENTRO-OESTE"
+    },
+    "MT": {
+        "codigo_ibge": "51",
+        "nome": "MATO GROSSO",
+        "regiao": "CENTRO-OESTE"
+    },
+    "GO": {
+        "codigo_ibge": "52",
+        "nome": "GOIÁS",
+        "regiao": "CENTRO-OESTE"
+    },
+    "DF": {
+        "codigo_ibge": "53",
+        "nome": "DISTRITO FEDERAL",
+        "regiao": "CENTRO-OESTE"
+    }
+}

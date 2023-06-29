@@ -1,0 +1,142 @@
+{
+    "0": {
+        "uf": "0",
+        "nome": "NÃO INFORMADO",
+        "regiao": "NÃO INFORMADO"
+    },
+    "11": {
+        "uf": "RO",
+        "nome": "RONDÔNIA",
+        "regiao": "NORTE"
+    },
+    "12": {
+        "uf": "AC",
+        "nome": "ACRE",
+        "regiao": "NORTE"
+    },
+    "13": {
+        "uf": "AM",
+        "nome": "AMAZONIA",
+        "regiao": "NORTE"
+    },
+    "14": {
+        "uf": "RR",
+        "nome": "RORAIMA",
+        "regiao": "NORTE"
+    },
+    "15": {
+        "uf": "PA",
+        "nome": "PARÁ",
+        "regiao": "NORTE"
+    },
+    "16": {
+        "uf": "AP",
+        "nome": "AMAPÁ",
+        "regiao": "NORTE"
+    },
+    "17": {
+        "uf": "TO",
+        "nome": "TOCANTINS",
+        "regiao": "NORTE"
+    },
+    "21": {
+        "uf": "MA",
+        "nome": "MARANHÃO",
+        "regiao": "NORDESTE"
+    },
+    "22": {
+        "uf": "PI",
+        "nome": "PIAUI",
+        "regiao": "NORDESTE"
+    },
+    "23": {
+        "uf": "CE",
+        "nome": "CEARÁ",
+        "regiao": "NORDESTE"
+    },
+    "24": {
+        "uf": "RN",
+        "nome": "RIO GRANDE DO NORTE",
+        "regiao": "NORDESTE"
+    },
+    "25": {
+        "uf": "PB",
+        "nome": "PARAÍBA",
+        "regiao": "NORDESTE"
+    },
+    "26": {
+        "uf": "PE",
+        "nome": "PERNANBUCO",
+        "regiao": "NORDESTE"
+    },
+    "27": {
+        "uf": "AL",
+        "nome": "ALAGOAS",
+        "regiao": "NORDESTE"
+    },
+    "28": {
+        "uf": "SE",
+        "nome": "SERGIPE",
+        "regiao": "NORDESTE"
+    },
+    "29": {
+        "uf": "BA",
+        "nome": "BAHIA",
+        "regiao": "NORDESTE"
+    },
+    "31": {
+        "uf": "MG",
+        "nome": "MINAS GERAIS",
+        "regiao": "SUDESTE"
+    },
+    "32": {
+        "uf": "ES",
+        "nome": "ESPÍRITO SANTOS",
+        "regiao": "SUDESTE"
+    },
+    "33": {
+        "uf": "RJ",
+        "nome": "RIO DE JANEIRO",
+        "regiao": "SUDESTE"
+    },
+    "35": {
+        "uf": "SP",
+        "nome": "SÃO PAULO",
+        "regiao": "SUDESTE"
+    },
+    "41": {
+        "uf": "PR",
+        "nome": "PARANÁ",
+        "regiao": "SUL"
+    },
+    "42": {
+        "uf": "SC",
+        "nome": "SANTA CATARINA",
+        "regiao": "SUL"
+    },
+    "43": {
+        "uf": "RS",
+        "nome": "RIO GRANDE DO SUL",
+        "regiao": "SUL"
+    },
+    "50": {
+        "uf": "MS",
+        "nome": "MATO GROSSO DO SUL",
+        "regiao": "CENTRO-OESTE"
+    },
+    "51": {
+        "uf": "MT",
+        "nome": "MATO GROSSO",
+        "regiao": "CENTRO-OESTE"
+    },
+    "52": {
+        "uf": "GO",
+        "nome": "GOIÁS",
+        "regiao": "CENTRO-OESTE"
+    },
+    "53": {
+        "uf": "DF",
+        "nome": "DISTRITO FEDERAL",
+        "regiao": "CENTRO-OESTE"
+    }
+}
